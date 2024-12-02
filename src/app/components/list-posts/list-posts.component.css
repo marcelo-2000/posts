@@ -1,0 +1,11 @@
+.section-main {
+    padding: 20px;
+}
+
+.fila_botones {
+    padding: 4px;
+    text-align: right;
+}
+.actions {
+    width: 20% !important;
+}

@@ -1,0 +1,31 @@
+<div class="container">
+    @if(id == 0) {
+        <h5>CREATE POST</h5>  
+    }
+    @else {
+        <h5>EDIT POST</h5>
+    }
+
+    <form (ngSubmit)="savePost()">
+        <div class="form-group">
+            <label for="">Id:</label>
+            <input type="text" name="id" class="form-control" [(ngModel)]="post.id">
+        </div>
+        <div class="form-group">
+            <label for="">User Id:</label>
+            <input type="text" name="userId" class="form-control" [(ngModel)]="post.userId">
+        </div>
+        <div class="form-group">
+            <label for="">Title:</label>
+            <input type="text" name="title" class="form-control" [(ngModel)]="post.title">
+        </div>
+        <div class="form-group">
+            <label for="">Body:</label>
+            <input type="text" name="body" class="form-control" [(ngModel)]="post.body">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">{{ (id==0)?'Save':'Update' }}</button>&nbsp;
+            <button class="btn btn-secondary" routerLink="/posts">Cancelar</button>
+        </div>
+    </form>
+</div>

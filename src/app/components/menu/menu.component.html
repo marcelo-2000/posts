@@ -1,0 +1,43 @@
+<div>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">POSTS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']"
+            routerLinkActive="router-link-active">Home</a>
+          <a class="nav-link" [routerLink]="['/posts']" routerLinkActive="router-link-active">Posts</a>
+          <a class="nav-link disabled">Close</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<!-- 
+<div>
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+    aria-controls="staticBackdrop">
+    Toggle
+  </button>
+
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="staticBackdrop"
+    aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>Menu</div>
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/posts">Posts</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+-->

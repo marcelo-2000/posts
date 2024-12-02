@@ -1,0 +1,36 @@
+<div class="section-main">
+    <div class="row">
+        <div class="col-md-12">
+            <h5>LIST OF POSTS</h5>
+            <div class="fila_botones">
+                <button class="btn btn-primary" routerLink="/posts/add">Add Post</button>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>USER</th>
+                        <th>TITLE</th>
+                        <th>BODY</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(post of posts; track post.id) {
+                        <tr>
+                            <td scope="row">{{ post.id }}</td>
+                            <td>{{ post.userId }}</td>
+                            <td>{{ post.title }}</td>
+                            <td>{{ post.body }}</td>
+                            <td class="actions">
+                                <button class="btn btn-info" [routerLink]="['/posts/show', post.id]">Show</button>&nbsp;
+                                <button class="btn btn-secondary" [routerLink]="['/posts/edit', post.id]">Edit</button>&nbsp;
+                                <button class="btn btn-danger" (click)="deletePost(post.id)">Delete</button>&nbsp;
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
